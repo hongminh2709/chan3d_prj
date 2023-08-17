@@ -36,3 +36,117 @@ a:hover {
 body {
   margin: 0;
 }
+input {
+  padding: 0;
+  border: none;
+  outline: none;
+}
+h2 {
+  margin-bottom: 0;
+  font-weight: initial;
+  margin-top: 0;
+}
+ul {
+  margin: 0;
+}
+@keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+  to {
+    width: 120%;
+  }
+}
+@keyframes home-anim-out-pseudo {
+  0% {
+    background: #edb600;
+  }
+  to {
+    background: transparent;
+  }
+}
+@keyframes fade-out {
+  0% {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes fade-out-1 {
+  to {
+    transform: rotateY(0);
+  }
+}
+@keyframes anim-out-pseudo {
+  0% {
+    background: #0066e9;
+  }
+  to {
+    background: transparent;
+  }
+}
+@keyframes show-image-1 {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes show-image-2 {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes show-image-3 {
+  0% {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes show-image-4 {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes show-image-5 {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes fadeOut1 {
+  to {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+@keyframes fadeOut1 {
+  to {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+@keyframes fadeOut {
+  from {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}

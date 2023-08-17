@@ -1,21 +1,33 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import AOS from "aos";
 import LayoutAuthenticated from "@/layouts/LayoutAuthenticated.vue";
 import SectionMain from "@/components/SectionMain.vue";
+import MediaVideo from "@/features/HomeView/MediaForm.vue";
+import AboutProduct from "@/features/HomeView/AboutProduct/AboutProduct.vue";
+import CaseSection from "@/features/CaseSection/CaseSection.vue";
+import Platform from "@/features/Platform/Platform.vue";
 
-defineProps({
-  msg: String,
+onMounted(() => {
+  AOS.init();
 });
-
-const count = ref(0);
 </script>
 
 <template>
   <LayoutAuthenticated>
-    <SectionMain>
-      <div>day la home vue</div>
-    </SectionMain>
+    <div class="page-main">
+      <MediaVideo />
+      <AboutProduct />
+      <CaseSection />
+      <Platform />
+    </div>
   </LayoutAuthenticated>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.page-main {
+  min-width: 1380px;
+  width: 100%;
+  overflow: hidden;
+}
+</style>

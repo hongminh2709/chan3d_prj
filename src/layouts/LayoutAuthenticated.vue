@@ -7,7 +7,6 @@ defineProps({
   msg: String,
 });
 
-const count = ref(0);
 const menu = [
   {
     id: 0,
@@ -30,27 +29,29 @@ const menu = [
 
 <template>
   <div>
-    <div class="header">
-      <div class="container">
-        <div class="hd-content">
-          <div class="hd-content__logo">
-            <a href="/"> <img src="/src/assets/logo.svg" alt="" /></a>
-            <span>知了云展</span>
+    <div class="header-pc">
+      <div class="header">
+        <div class="container">
+          <div class="hd-content">
+            <div class="hd-content__logo">
+              <a href="/"> <img src="/src/assets/logo.svg" alt="" /></a>
+              <span>知了云展</span>
+            </div>
+            <div class="hd-content__nav">
+              <Navbar :menu="menu" />
+            </div>
+            <div class="cooperation"><Button label="合作模式" /></div>
           </div>
-          <div class="hd-content__nav">
-            <Navbar :menu="menu" />
-          </div>
-          <div class="cooperation"><Button label="合作模式" /></div>
-        </div>
-        <div class="hd-user">
-          <div class="hd-user__vip">
-            <img src="/src/assets/crown.png" alt="" />
-            <p>升级VIP</p>
-          </div>
-          <div class="hd-user__regis">
-            <span class="re-sp">登录</span>
-            <span>|</span>
-            <span class="re-sp">登录</span>
+          <div class="hd-user">
+            <div class="hd-user__vip">
+              <img src="/src/assets/crown.png" alt="" />
+              <p>升级VIP</p>
+            </div>
+            <div class="hd-user__regis">
+              <span class="re-sp">登录</span>
+              <span>|</span>
+              <span class="re-sp">登录</span>
+            </div>
           </div>
         </div>
       </div>
@@ -65,6 +66,9 @@ const menu = [
 </template>
 
 <style scoped lang="scss">
+.header-pc {
+  height: 70px;
+}
 .header {
   position: fixed;
   top: 0;

@@ -7,8 +7,6 @@ const props = defineProps({
     required: true,
   },
 });
-
-const count = ref(0);
 </script>
 
 <template>
